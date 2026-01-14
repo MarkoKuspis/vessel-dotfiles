@@ -1,0 +1,5 @@
+machine.conf
+*.local
+.env*
+secrets*
+*.save*
