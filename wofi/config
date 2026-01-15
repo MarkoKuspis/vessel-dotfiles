@@ -1,0 +1,9 @@
+show=drun
+width=40%
+lines=8
+prompt=Search…
+insensitive=true
+term=foot
+allow_images=true
+image_size=32
+gtk_dark=true
