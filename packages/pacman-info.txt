@@ -1,0 +1,33 @@
+Date: 2026-01-15T14:30:44+02:00
+Kernel: 6.18.5-arch1-1
+Host: churn-vessel
+NVIDIA:
+Thu Jan 15 14:30:44 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 590.48.01              Driver Version: 590.48.01      CUDA Version: 13.1     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 5070        Off |   00000000:01:00.0  On |                  N/A |
+|  0%   45C    P3             19W /  250W |    1674MiB /  12227MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            3641      G   /usr/lib/Xorg                            37MiB |
+|    0   N/A  N/A            3730      G   Hyprland                                384MiB |
+|    0   N/A  N/A            3798      G   Xwayland                                  3MiB |
+|    0   N/A  N/A            3920      G   /opt/1Password/1password                 64MiB |
+|    0   N/A  N/A            4777      G   ...rack-uuid=3190708988185955192        242MiB |
+|    0   N/A  N/A            6051      G   ...share/Steam/ubuntu12_32/steam          3MiB |
+|    0   N/A  N/A            6628      G   ./steamwebhelper                         35MiB |
+|    0   N/A  N/A            6655      G   ...am/ubuntu12_64/steamwebhelper        181MiB |
+|    0   N/A  N/A            8782      G   /usr/lib/electron39/electron             96MiB |
+|    0   N/A  N/A            9516      G   /opt/discord/Discord                    142MiB |
++-----------------------------------------------------------------------------------------+
