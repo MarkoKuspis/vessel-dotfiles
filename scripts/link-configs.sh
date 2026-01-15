@@ -1,53 +1,46 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="${HOME}/vessel-dotfiles"
-CONFIG="${HOME}/.config"
-BACKUP_DIR="${HOME}/.config/.dotfiles-backup/$(date +%Y%m%d-%H%M%S)"
+REPO="$HOME/vessel-dotfiles"
+CONFIG="$HOME/.config"
+BACKUP_ROOT="$CONFIG/.dotfiles-backup"
+BACKUP_DIR="$BACKUP_ROOT/$(date +%Y%m%d-%H%M%S)"
 
-# Map: <repo-relative-path> -> <config-relative-path>
-# Add files to repo whenever you're ready; missing ones will be skipped with a warning.
-declare -a LINKS=(
-  # Hyprland
+LINKS=(
   "hypr/hyprland.conf:hypr/hyprland.conf"
-
-  # Hyprpaper (wallpapers)
   "hypr/hyprpaper.conf:hypr/hyprpaper.conf"
 
-  # Waybar
   "waybar/config.jsonc:waybar/config.jsonc"
   "waybar/style.css:waybar/style.css"
 
-  # Wofi (launcher)
   "wofi/style.css:wofi/style.css"
   "wofi/config:wofi/config"
 
-  # Mako (notifications)
   "mako/config:mako/config"
-
-  # Foot (terminal)
   "foot/foot.ini:foot/foot.ini"
-
-  # Optional: default app associations (if you choose to track it)
   "xdg/mimeapps.list:mimeapps.list"
 )
 
-mkdir -p "$BACKUP_DIR"
+die() { echo "ERROR: $*" >&2; exit 1; }
 
-backup_if_needed() {
-  local target="$1"
-
-  # Don't back up if it's already a symlink
-  if [[ -L "$target" ]]; then
-    return 0
+ensure_real_dir() {
+  local d="$1"
+  # If it's a symlink (your old Option B setup), remove it and create a real dir.
+  if [[ -L "$d" ]]; then
+    echo "Found symlink dir, removing (Option A requires real dirs): $d -> $(readlink "$d")"
+    rm -f "$d"
   fi
+  mkdir -p "$d"
+}
 
-  if [[ -e "$target" ]]; then
+backup_if_real_file() {
+  local target="$1"
+  if [[ -e "$target" && ! -L "$target" ]]; then
     local rel="${target#${CONFIG}/}"
-    local dest="${BACKUP_DIR}/${rel}"
+    local dest="$BACKUP_DIR/$rel"
     mkdir -p "$(dirname "$dest")"
     mv "$target" "$dest"
-    echo "Backed up: $target -> $dest"
+    echo "Backed up: $target → $dest"
   fi
 }
 
@@ -55,29 +48,40 @@ link_one() {
   local src_rel="$1"
   local dst_rel="$2"
 
-  local src="${REPO}/${src_rel}"
-  local dst="${CONFIG}/${dst_rel}"
+  local src="$REPO/$src_rel"
+  local dst="$CONFIG/$dst_rel"
 
-  if [[ ! -e "$src" ]]; then
-    echo "WARN: source missing, skipping: $src"
+  [[ -e "$src" ]] || { echo "WARN: missing source, skipping: $src"; return 0; }
+  [[ ! -L "$src" ]] || die "repo source is a symlink (loop risk): $src (fix: make it a real file in repo)"
+
+  ensure_real_dir "$(dirname "$dst")"
+
+  # Idempotent: if correct symlink already exists, do nothing
+  if [[ -L "$dst" && "$(readlink -f "$dst")" == "$src" ]]; then
+    echo "OK: already linked $dst"
     return 0
   fi
 
-  mkdir -p "$(dirname "$dst")"
-  backup_if_needed "$dst"
+  backup_if_real_file "$dst"
 
-  # Replace wrong symlink
-  if [[ -L "$dst" && "$(readlink "$dst")" != "$src" ]]; then
-    rm -f "$dst"
-  fi
+  # Remove wrong symlink
+  [[ -L "$dst" ]] && rm -f "$dst"
 
-  ln -sfn "$src" "$dst"
-  echo "Linked: $dst -> $src"
+  ln -s "$src" "$dst"
+  echo "Linked: $dst → $src"
 }
 
+mkdir -p "$BACKUP_DIR"
+
+echo "Linking dotfiles (Option A: file-level, idempotent)…"
+
+# Ensure these are REAL dirs (kills your old folder symlinks)
+ensure_real_dir "$CONFIG/hypr"
+ensure_real_dir "$CONFIG/waybar"
+
 for pair in "${LINKS[@]}"; do
-  IFS=":" read -r src_rel dst_rel <<<"$pair"
-  link_one "$src_rel" "$dst_rel"
+  IFS=":" read -r src dst <<<"$pair"
+  link_one "$src" "$dst"
 done
 
 echo
