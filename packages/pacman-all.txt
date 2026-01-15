@@ -226,6 +226,7 @@ hdparm
 hicolor-icon-theme
 hidapi
 highway
+htop
 hwdata
 hwdetect
 hwinfo
@@ -247,6 +248,7 @@ imath
 inetutils
 iniparser
 inxi
+iotop
 iproute2
 iptables-nft
 iputils

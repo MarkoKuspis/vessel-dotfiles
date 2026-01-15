@@ -64,12 +64,14 @@ gst-plugins-bad
 gst-plugins-ugly
 haveged
 hdparm
+htop
 hwdetect
 hwinfo
 hyprland
 hyprpaper
 inetutils
 inxi
+iotop
 iptables-nft
 iwd
 jfsutils
