@@ -665,6 +665,8 @@ mesa
 mesa-utils
 minizip
 mjpegtools
+mkinitcpio
+mkinitcpio-busybox
 mobile-broadband-provider-info
 modemmanager
 mpdecimal
@@ -929,6 +931,7 @@ v4l-utils
 vapoursynth
 vi
 vid.stab
+viewnior
 vmaf
 volume_key
 vpnc
