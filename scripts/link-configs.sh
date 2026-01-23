@@ -18,8 +18,13 @@ LINKS=(
 
   "mako/config:mako/config"
   "foot/foot.ini:foot/foot.ini"
+  "alacritty/alacritty.toml:alacritty/alacritty.toml"
+  "zsh/spaceship.zsh:spaceship.zsh"
   "xdg/mimeapps.list:mimeapps.list"
 )
+
+# Special handling for .zshrc (goes to home directory)
+ZSHRC_LINK="zsh/.zshrc"
 
 die() { echo "ERROR: $*" >&2; exit 1; }
 
@@ -83,6 +88,22 @@ for pair in "${LINKS[@]}"; do
   IFS=":" read -r src dst <<<"$pair"
   link_one "$src" "$dst"
 done
+
+# Link .zshrc to home directory (not .config)
+if [[ -n "${ZSHRC_LINK:-}" ]]; then
+  src="$REPO/$ZSHRC_LINK"
+  dst="$HOME/.zshrc"
+  
+  if [[ -e "$src" ]]; then
+    # Idempotent: if correct symlink already exists, do nothing
+    if [[ -L "$dst" && "$(readlink -f "$dst")" == "$src" ]]; then
+      echo "OK: already linked $dst"
+    else
+      ln -sf "$src" "$dst"
+      echo "Linked: $dst → $src"
+    fi
+  fi
+fi
 
 echo
 echo "Done."
