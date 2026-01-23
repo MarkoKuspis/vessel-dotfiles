@@ -66,8 +66,8 @@
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": "",
-      "deactivated": ""
+      "activated": " ",
+      "deactivated": " "
     },
     "tooltip-format-activated": "Idle inhibitor: Active (screen won't sleep)",
     "tooltip-format-deactivated": "Idle inhibitor: Inactive"
@@ -143,10 +143,9 @@
     "tooltip-format": "Volume: {volume}%\nMicrophone: {format_source}"  },
 
   "hyprland/language": {
-    "format": "  {}",
-    "format-en": "EN",
-    "format-es": "ES",
-    "format-fr": "FR",
+    "format": "{}",
+    "format-en": "EN", 
+    "format-uk": "UK",
     "tooltip-format": "Keyboard: {long}"
   }
 }

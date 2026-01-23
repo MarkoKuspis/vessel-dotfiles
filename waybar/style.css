@@ -25,7 +25,7 @@ button:hover {
 #workspaces button {
     padding: 0 8px;
     margin: 0 4px;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     color: #ffffff;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -33,11 +33,11 @@ button:hover {
 }
 
 #workspaces button:hover {
-    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 #workspaces button.active {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 #workspaces button.urgent {
@@ -51,10 +51,10 @@ button:hover {
 
 #clock, #cpu, #memory, #temperature, #network,
 #pulseaudio, #tray, #idle_inhibitor,
-#power-profiles-daemon, #mpd, #language {
+#power-profiles-daemon, #mpd, #language, #custom-power {
     padding: 0 12px;
     margin: 0 4px;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     color: #ffffff;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -64,8 +64,8 @@ button:hover {
 #clock:hover, #cpu:hover, #memory:hover,
 #temperature:hover, #network:hover, #pulseaudio:hover,
 #idle_inhibitor:hover, #power-profiles-daemon:hover, 
-#language:hover, #tray:hover {
-    opacity: 0.8;
+#language:hover, #tray:hover, #custom-power:hover {
+    background: rgba(255, 255, 255, 0.25);
 }
 
 .modules-left > widget:first-child > #workspaces { margin-left: 0; }
@@ -75,45 +75,49 @@ button:hover {
     font-weight: bold;
 }
 
+#power-profiles-daemon {
+    min-width: 20px;
+}
+
 #power-profiles-daemon.performance {
-    background: rgba(255, 0, 0, 0.1);
+    background: rgba(255, 0, 0, 0.3);
 }
 
 #power-profiles-daemon.balanced {
-    background: rgba(255, 255, 0, 0.1);
+    background: rgba(255, 255, 0, 0.3);
 }
 
 #power-profiles-daemon.power-saver {
-    background: rgba(0, 255, 0, 0.1);
+    background: rgba(0, 255, 0, 0.3);
 }
 
 #cpu.warning { 
-    background: rgba(255, 255, 0, 0.1);
+    background: rgba(255, 255, 0, 0.3);
 }
 
 #cpu.critical { 
-    background: rgba(255, 0, 0, 0.1);
+    background: rgba(255, 0, 0, 0.3);
 }
 
 #memory.warning { 
-    background: rgba(255, 255, 0, 0.1);
+    background: rgba(255, 255, 0, 0.3);
 }
 
 #memory.critical { 
-    background: rgba(255, 0, 0, 0.1);
+    background: rgba(255, 0, 0, 0.3);
 }
 
 #network.disconnected {
-    background: rgba(255, 0, 0, 0.1);
+    background: rgba(255, 0, 0, 0.3);
 }
 
 #pulseaudio.muted {
-    background: rgba(255, 255, 0, 0.1);
+    background: rgba(255, 255, 0, 0.3);
     color: #d79921;
 }
 
 #temperature.critical {
-    background: rgba(255, 0, 0, 0.1);
+    background: rgba(255, 0, 0, 0.3);
     animation: temp-pulse 2s ease infinite alternate;
 }
 
@@ -131,33 +135,38 @@ button:hover {
     border-radius: 4px;
 }
 
+#idle_inhibitor {
+    padding-left: 14px;
+}
+
 #idle_inhibitor.activated {
-    background: rgba(255, 236, 210, 0.2);
+    padding-left: 14px;
+    background: rgba(255, 236, 210, 0.3);
 }
 
 #mpd { 
-    background: rgba(102, 204, 153, 0.2);
+    background: rgba(102, 204, 153, 0.3);
 }
 
 #mpd.disconnected { 
-    background: rgba(245, 60, 60, 0.2);
+    background: rgba(245, 60, 60, 0.3);
 }
 
 #mpd.stopped { 
-    background: rgba(144, 177, 177, 0.2);
+    background: rgba(144, 177, 177, 0.3);
 }
 
 #mpd.paused { 
-    background: rgba(81, 163, 122, 0.2);
+    background: rgba(81, 163, 122, 0.3);
 }
 
 tooltip {
-    color: rgba(255, 255, 255, 0.8);
-    background: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
 }
 
 tooltip * {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     background: transparent;
 }
