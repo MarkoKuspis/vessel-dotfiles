@@ -3,10 +3,10 @@
   "reload_style_on_change": true,
   "height": 30,
   "spacing": 4,
-  "margin-top": 10,
-  "margin-bottom": 10,
-  "margin-left": 12,
-  "margin-right": 12,
+  "margin-top": 8,
+  "margin-bottom": 0,
+  "margin-left": 8,
+  "margin-right": 8,
 
   "modules-left": [
     "hyprland/workspaces",
@@ -31,7 +31,7 @@
 
   "temperature#cpu": {
     "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-    "format": " CPU {temperatureC}°C",
+    "format": "{temperatureC}°C  ",
     "critical-threshold": 85,
     "tooltip-format": "CPU Temperature: {temperatureC}°C"
   },
@@ -86,13 +86,13 @@
 
   "cpu": {
     "interval": 2,
-    "format": " CPU {usage}%  ",
+    "format": "{usage}%  ",
     "tooltip-format": "CPU Usage: {usage}%\nLoad Average: {load}"
   },
 
   "memory": {
     "interval": 5,
-    "format": " RAM {percentage}%  ",
+    "format": "{percentage}%  ",
     "tooltip-format": "Memory Usage: {used:0.1f}G / {total:0.1f}G ({percentage}%)\nSwap: {swapUsed:0.1f}G / {swapTotal:0.1f}G"
   },
 
@@ -140,6 +140,13 @@
       "default": ["  ", "  ", "  "]
     },
     "on-click": "pavucontrol",
-    "tooltip-format": "Volume: {volume}%\nMicrophone: {format_source}"
+    "tooltip-format": "Volume: {volume}%\nMicrophone: {format_source}"  },
+
+  "hyprland/language": {
+    "format": "  {}",
+    "format-en": "EN",
+    "format-es": "ES",
+    "format-fr": "FR",
+    "tooltip-format": "Keyboard: {long}"
   }
 }
