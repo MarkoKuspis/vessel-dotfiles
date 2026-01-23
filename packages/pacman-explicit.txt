@@ -229,6 +229,7 @@ usb_modeswitch
 usbutils
 vi
 viewnior
+visual-studio-code-bin
 vulkan-tools
 wacomtablet
 waybar

@@ -206,6 +206,7 @@ gmp
 gnulib-l10n
 gnupg
 gnutls
+go
 gobject-introspection-runtime
 gocryptfs
 google-chrome
@@ -1082,6 +1083,7 @@ verdict
 vi
 vid.stab
 viewnior
+visual-studio-code-bin
 vmaf
 volume_key
 vpnc
