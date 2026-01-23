@@ -7,22 +7,19 @@
   "modules-left": [
     "hyprland/workspaces",
     "hyprland/submap"
-    // "sway/scratchpad", // not available on Hyprland
   ],
 
-  "modules-center": [
-    "hyprland/window"
-  ],
+  "modules-center": [ "hyprland/window" ],
 
   "modules-right": [
+    "temperature#gpu",
     "temperature#cpu",
-    "mpd",
-    "idle_inhibitor",
-    "pulseaudio",
-    "network",
-    "power-profiles-daemon",
     "cpu",
     "memory",
+    "network",
+    "pulseaudio",
+    "idle_inhibitor",
+    "power-profiles-daemon",
     "hyprland/language",
     "clock",
     "tray"
@@ -30,18 +27,19 @@
 
   "temperature#cpu": {
     "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-    "format": "CPU {temperatureC}°C",
-    "critical-threshold": 85
+    "format": " CPU {temperatureC}°C",
+    "critical-threshold": 85,
+    "tooltip-format": "CPU Temperature: {temperatureC}°C"
   },
 
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": "{name} {icon}",
-    "format-icons": { "locked": "", "unlocked": "" }
+  "temperature#gpu": {
+    "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
+    "format": " GPU {temperatureC}°C",
+    "critical-threshold": 80,
+    "tooltip-format": "GPU Temperature: {temperatureC}°C"
   },
 
-  // "sway/mode" -> Hyprland equivalent is submap, configured via hyprland/submap:
+  // Hyprland submap (used instead of sway/mode)
   "hyprland/submap": {
     "format": "<span style=\"italic\">{}</span>"
   },
@@ -63,25 +61,41 @@
 
   "idle_inhibitor": {
     "format": "{icon}",
-    "format-icons": { "activated": "", "deactivated": "" }
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    },
+    "tooltip-format-activated": "Idle inhibitor: Active (screen won't sleep)",
+    "tooltip-format-deactivated": "Idle inhibitor: Inactive"
   },
 
   "tray": {
-    "spacing": 10
+    "spacing": 10,
+    "icon-size": 16
   },
 
   "clock": {
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "format": " {:%H:%M}",
+    "format-alt": " {:%A, %B %d, %Y}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
 
-  "cpu": { "format": "{usage}% ", "tooltip": false },
-  "memory": { "format": "{}% " },
+  "cpu": {
+    "interval": 2,
+    "format": " CPU {usage}%  ",
+    "tooltip-format": "CPU Usage: {usage}%\nLoad Average: {load}"
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": " RAM {percentage}%  ",
+    "tooltip-format": "Memory Usage: {used:0.1f}G / {total:0.1f}G ({percentage}%)\nSwap: {swapUsed:0.1f}G / {swapTotal:0.1f}G"
+  },
 
   "temperature": {
     "critical-threshold": 80,
     "format": "{temperatureC}°C {icon}",
-    "format-icons": ["", "", ""]
+    "format-icons": [ "", "", "" ]
   },
 
   "power-profiles-daemon": {
@@ -97,7 +111,7 @@
   },
 
   "network": {
-    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-wifi": "{essid} ({signalStrength}%)  ",
     "format-ethernet": "{ipaddr}/{cidr} ",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
@@ -111,7 +125,7 @@
     "format-bluetooth-muted": " {icon} {format_source}",
     "format-muted": " {format_source}",
     "format-source": "{volume}% ",
-    "format-source-muted": "",
+    "format-source-muted": " ",
     "format-icons": {
       "headphone": "",
       "hands-free": "",
@@ -119,8 +133,9 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
+      "default": ["  ", "  ", "  "]
     },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
+    "tooltip-format": "Volume: {volume}%\nMicrophone: {format_source}"
   }
 }
