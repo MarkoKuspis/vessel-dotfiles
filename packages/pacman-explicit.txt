@@ -207,6 +207,7 @@ slurp
 smartmontools
 s-nail
 sof-firmware
+spaceship-prompt
 spectacle
 spotify
 steam
@@ -259,3 +260,4 @@ xorg-xkill
 xorg-xrandr
 xterm
 yay
+zsh

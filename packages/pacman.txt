@@ -1024,6 +1024,7 @@ sord
 sound-theme-freedesktop
 soundtouch
 source-highlight
+spaceship-prompt
 spandsp
 spdlog
 spectacle
@@ -1165,6 +1166,7 @@ zimg
 zix
 zlib
 zlib-ng
+zsh
 zstd
 zvbi
 zxing-cpp
