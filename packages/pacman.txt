@@ -9,6 +9,7 @@ adwaita-fonts
 adwaita-icon-theme
 adwaita-icon-theme-legacy
 aha
+alacritty
 alsa-card-profiles
 alsa-firmware
 alsa-lib
