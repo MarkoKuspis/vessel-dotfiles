@@ -6,62 +6,68 @@
   "margin-bottom": 0,
   "margin-left": 8,
   "margin-right": 8,
-
   "modules-left": [
-    "hyprland/workspaces",
-    "hyprland/submap"
-  ],
-
-  "modules-center": [ "hyprland/window" ],
-
-  "modules-right": [
-    "temperature#gpu",
-    "temperature#cpu",
+    "clock",
     "cpu",
     "memory",
-    "network",
+    "disk",
+    "temperature#cpu",
+    "temperature#gpu",
+    "temperature"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "pulseaudio/slider",
     "pulseaudio",
     "idle_inhibitor",
     "power-profiles-daemon",
+    "network",
     "hyprland/language",
-    "clock",
     "tray"
   ],
-
+  "clock": {
+    "format": " {:%H:%M}",
+    "format-alt": " {:%A, %B %d, %Y}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "cpu": {
+    "interval": 2,
+    "format": "{usage}%  ",
+    "tooltip-format": "CPU usage: {usage}%\nLoad Average: {load}"
+  },
+  "memory": {
+    "format": "{percentage}%  ",
+    "interval": 5,
+    "tooltip-format": "Memory usage: {used:0.1f}G / {total:0.1f}G ({percentage}%)\nSwap: {swapUsed:0.1f}G / {swapTotal:0.1f}G"
+  },
+  "disk": {
+    "format": "{percentage_free}% ",
+    "tooltip": true,
+    "tooltip-format": "Disk usage: {free} / {total} ({percentage_free}%)"
+  },
   "temperature#cpu": {
     "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
     "format": "{temperatureC}°C  ",
     "critical-threshold": 85,
-    "tooltip-format": "CPU Temperature: {temperatureC}°C"
+    "tooltip-format": "CPU temperature: {temperatureC}°C"
   },
-
   "temperature#gpu": {
     "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
-    "format": " GPU {temperatureC}°C",
+    "format": "{temperatureC}°C  ",
     "critical-threshold": 80,
-    "tooltip-format": "GPU Temperature: {temperatureC}°C"
+    "tooltip-format": "GPU temperature: {temperatureC}°C"
   },
-
-  // Hyprland submap (used instead of sway/mode)
-  "hyprland/submap": {
-    "format": "<span style=\"italic\">{}</span>"
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
   },
-
-  "mpd": {
-    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-    "format-disconnected": "Disconnected ",
-    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-    "unknown-tag": "N/A",
-    "interval": 5,
-    "consume-icons": { "on": " " },
-    "random-icons": { "off": "<span color=\"#f53c3c\"></span> ", "on": " " },
-    "repeat-icons": { "on": " " },
-    "single-icons": { "on": "1 " },
-    "state-icons": { "paused": "", "playing": "" },
-    "tooltip-format": "MPD (connected)",
-    "tooltip-format-disconnected": "MPD (disconnected)"
-  },
-
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
@@ -71,36 +77,10 @@
     "tooltip-format-activated": "Idle inhibitor: Active (screen won't sleep)",
     "tooltip-format-deactivated": "Idle inhibitor: Inactive"
   },
-
   "tray": {
     "spacing": 10,
     "icon-size": 16
   },
-
-  "clock": {
-    "format": " {:%H:%M}",
-    "format-alt": " {:%A, %B %d, %Y}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-  },
-
-  "cpu": {
-    "interval": 2,
-    "format": "{usage}%  ",
-    "tooltip-format": "CPU Usage: {usage}%\nLoad Average: {load}"
-  },
-
-  "memory": {
-    "interval": 5,
-    "format": "{percentage}%  ",
-    "tooltip-format": "Memory Usage: {used:0.1f}G / {total:0.1f}G ({percentage}%)\nSwap: {swapUsed:0.1f}G / {swapTotal:0.1f}G"
-  },
-
-  "temperature": {
-    "critical-threshold": 80,
-    "format": "{temperatureC}°C {icon}",
-    "format-icons": [ "", "", "" ]
-  },
-
   "power-profiles-daemon": {
     "format": "{icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -112,7 +92,6 @@
       "power-saver": ""
     }
   },
-
   "network": {
     "format-wifi": "{essid} ({signalStrength}%)  ",
     "format-ethernet": "{ipaddr}/{cidr} ",
@@ -121,7 +100,6 @@
     "format-disconnected": "Disconnected ⚠",
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
-
   "pulseaudio": {
     "format": "{volume}% {icon} {format_source}",
     "format-bluetooth": "{volume}% {icon} {format_source}",
@@ -136,14 +114,24 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["  ", "  ", "  "]
+      "default": [
+        "  ",
+        "  ",
+        "  "
+      ]
     },
     "on-click": "pavucontrol",
-    "tooltip-format": "Volume: {volume}%\nMicrophone: {format_source}"  },
-
+    "tooltip-format": "Volume: {volume}%\nMicrophone: {format_source}"
+  },
+  "pulseaudio/slider": {
+    "format": "{volume}%",
+    "format-muted": " MUTE",
+    "step": 5,
+    "tooltip": false
+  },
   "hyprland/language": {
-    "format": "{}",
-    "format-en": "EN", 
+    "format": "{} ",
+    "format-en": "EN",
     "format-uk": "UK",
     "tooltip-format": "Keyboard: {long}"
   }
