@@ -102,9 +102,9 @@
   },
   "network": {
     "format-wifi": "{essid} ({signalStrength}%)  ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "tooltip-format": "{ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰈀 ",
+    "tooltip-format": "{ifname} via {gwaddr}  ",
+    "format-linked": "{ifname} (No IP)  ",
     "format-disconnected": "Disconnected ⚠",
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
@@ -129,7 +129,7 @@
       ]
     },
     "on-click": "pavucontrol",
-    "tooltip-format": "Volume: {volume}%\nMicrophone: {format_source}"
+    "tooltip-format": "Volume: {volume}% {icon}\nMicrophone: {format_source}"
   },
   "hyprland/language": {
     "format": "{} ",
