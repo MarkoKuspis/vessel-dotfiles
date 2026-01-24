@@ -143,8 +143,12 @@ slider highlight {
     color: #d79921;
 }
 
+#temperature.warning {
+    background: rgba(255, 255, 0, 0.2);
+}
+
 #temperature.critical {
-    background: rgba(255, 0, 0, 0.3);
+    background: rgba(255, 0, 0, 0.2);
     animation: temp-pulse 2s ease infinite alternate;
 }
 
@@ -172,12 +176,12 @@ slider highlight {
 }
 
 tooltip {
-    color: rgba(255, 255, 255, 0.9);
-    background: rgba(255, 255, 255, 0.2);
+    color: rgba(2, 2, 2, 1);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
 }
 
 tooltip * {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(2, 2, 2, 1);
     background: transparent;
 }
