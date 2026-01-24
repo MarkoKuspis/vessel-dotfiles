@@ -12,7 +12,7 @@
     "memory",
     "disk",
     "temperature#cpu",
-    "temperature#gpu"
+    "custom/nvidia_temp"
   ],
   "modules-center": [
     "hyprland/workspaces"
@@ -43,12 +43,12 @@
     "tooltip-format": "Memory usage: {used:0.1f}G / {total:0.1f}G ({percentage}%)\nSwap: {swapUsed:0.1f}G / {swapTotal:0.1f}G"
   },
   "disk": {
-    "format": "{percentage_free}%  ",
+    "format": "{percentage_used}%  ",
     "tooltip": true,
-    "tooltip-format": "Disk usage: {free} / {total} ({percentage_free}%)"
+    "tooltip-format": "Disk usage: {used} / {total} ({percentage_used}%)"
   },
   "temperature#cpu": {
-    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "format": "{icon} {temperatureC}°C  ",
     "critical-threshold": 85,
     "tooltip-format": "CPU temperature: {temperatureC}°C",
@@ -58,16 +58,12 @@
       ""
     ]
   },
-  "temperature#gpu": {
-    "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
-    "format": "{icon} {temperatureC}°C  ",
-    "critical-threshold": 80,
-    "tooltip-format": "GPU temperature: {temperatureC}°C",
-    "format-icons": [
-      "",
-      "",
-      ""
-    ]
+  "custom/nvidia_temp": {
+    "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits | awk '{print \" \" $1 \" °C 󰢮 \"}'",
+    "interval": 2,
+    "tooltip": true,
+    "tooltip-format": "NVIDIA GPU temperature",
+    "return-type": "text"
   },
   "wlr/taskbar": {
     "format": "{icon}",

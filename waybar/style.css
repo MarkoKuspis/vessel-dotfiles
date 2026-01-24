@@ -49,7 +49,7 @@ button:hover {
     50% { opacity: 0.5; }
 }
 
-#clock, #cpu, #memory, #disk, #temperature, #network,
+#clock, #cpu, #memory, #disk, #temperature, #custom-nvidia_temp, #network,
 #pulseaudio, #tray, #idle_inhibitor,
 #power-profiles-daemon, #language, #custom-power {
     padding: 0 12px;
@@ -62,7 +62,7 @@ button:hover {
 }
 
 #cpu:hover, #memory:hover, #disk:hover,
-#temperature:hover, #network:hover, #pulseaudio:hover,
+#temperature:hover, #custom-nvidia_temp:hover, #network:hover, #pulseaudio:hover,
 #idle_inhibitor:hover, #power-profiles-daemon:hover,
 #language:hover, #tray:hover, #custom-power:hover {
     background: rgba(255, 255, 255, 0.25);
@@ -168,11 +168,13 @@ highlight {
     background: rgba(255, 255, 255, 0.25);
 }
 
-#temperature.warning {
+#temperature.warning,
+#custom-nvidia_temp.warning {
     background: rgba(255, 255, 0, 0.2);
 }
 
-#temperature.critical {
+#temperature.critical,
+#custom-nvidia_temp.critical {
     background: rgba(255, 0, 0, 0.2);
     animation: temp-pulse 2s ease infinite alternate;
 }
