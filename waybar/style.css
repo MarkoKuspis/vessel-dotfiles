@@ -61,7 +61,7 @@ button:hover {
     min-height: 30px;
 }
 
-#clock:hover, #cpu:hover, #memory:hover, #disk:hover,
+#cpu:hover, #memory:hover, #disk:hover,
 #temperature:hover, #network:hover, #pulseaudio:hover,
 #idle_inhibitor:hover, #power-profiles-daemon:hover,
 #language:hover, #tray:hover, #custom-power:hover {
@@ -73,6 +73,12 @@ button:hover {
 
 #clock {
     font-weight: bold;
+    background: rgba(127, 195, 181, 0.9);
+    color: #1d2021;
+}
+
+#clock:hover {
+    background: rgba(127, 195, 181, 1);
 }
 
 #power-profiles-daemon {
