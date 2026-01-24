@@ -20,6 +20,7 @@
   "modules-right": [
     "wlr/taskbar",
     "pulseaudio",
+    "pulseaudio/slider",
     "idle_inhibitor",
     "power-profiles-daemon",
     "network",
@@ -128,7 +129,14 @@
       ]
     },
     "on-click": "pavucontrol",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
     "tooltip-format": "Volume: {volume}% {icon}\nMicrophone: {format_source}"
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
   },
   "hyprland/language": {
     "format": "{}  ",

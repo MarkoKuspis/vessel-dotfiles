@@ -130,6 +130,44 @@ button:hover {
     color: #d79921;
 }
 
+slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 1;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    background: rgb(211, 211, 211);
+    border-radius: 50%;
+    min-width: 12px;
+    min-height: 12px;
+}
+
+trough {
+    min-height: 8px;
+    min-width: 80px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+highlight {
+    min-height: 8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#pulseaudio-slider {
+    padding: 0 14px;
+    margin: 0 4px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    min-height: 30px;
+}
+
+#pulseaudio-slider:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
 #temperature.warning {
     background: rgba(255, 255, 0, 0.2);
 }
