@@ -1,5 +1,6 @@
 1password
 google-chrome
+openrgb
 spaceship-prompt
 spotify
 visual-studio-code-bin
