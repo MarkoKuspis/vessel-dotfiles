@@ -19,6 +19,7 @@ alsa-ucm-conf
 alsa-utils
 amd-ucode
 aom
+apparmor
 appstream
 appstream-qt
 aquamarine
@@ -59,6 +60,7 @@ breeze-gtk
 breeze-icons
 breeze-plymouth
 brotli
+btop
 btrfs-progs
 bubblewrap
 bzip2
@@ -146,10 +148,12 @@ exiv2
 exo
 expac
 expat
+ex-vi-compat
 f2fs-tools
 faac
 faad2
 fakeroot
+fastfetch
 fcft
 fd
 ffmpeg
@@ -295,6 +299,7 @@ jfsutils
 json-c
 jsoncpp
 json-glib
+judy
 kaccounts-integration
 kactivitymanagerd
 karchive
@@ -719,6 +724,7 @@ linux-firmware-radeon
 linux-firmware-realtek
 linux-firmware-whence
 linux-headers
+lksctp-tools
 llvm-libs
 lmdb
 lm_sensors
@@ -926,6 +932,7 @@ python-fonttools
 python-gobject
 python-jinja
 python-kiwisolver
+python-legacy-cgi
 python-markupsafe
 python-matplotlib
 python-numpy
@@ -1038,6 +1045,8 @@ srt
 startup-notification
 steam
 stoken
+stress
+stress-ng
 sudo
 svt-av1
 svt-hevc
@@ -1082,9 +1091,10 @@ util-linux-libs
 v4l-utils
 vapoursynth
 verdict
-vi
 vid.stab
 viewnior
+vim
+vim-runtime
 visual-studio-code-bin
 vmaf
 volume_key
@@ -1159,6 +1169,7 @@ xxhash
 xz
 yad
 yay
+yyjson
 zbar
 zenity
 zeromq

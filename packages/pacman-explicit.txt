@@ -19,6 +19,7 @@ bluez-utils
 breeze
 breeze-gtk
 breeze-plymouth
+btop
 btrfs-progs
 cantarell-fonts
 cliphist
@@ -52,7 +53,9 @@ eos-quickstart
 eos-rankmirrors
 ethtool
 exfatprogs
+ex-vi-compat
 f2fs-tools
+fastfetch
 ffmpegthumbnailer
 file-roller
 firefox
@@ -211,6 +214,8 @@ spaceship-prompt
 spectacle
 spotify
 steam
+stress
+stress-ng
 sudo
 sysfsutils
 systemd-sysvcompat
@@ -229,7 +234,6 @@ unzip
 upower
 usb_modeswitch
 usbutils
-vi
 viewnior
 visual-studio-code-bin
 vulkan-tools
