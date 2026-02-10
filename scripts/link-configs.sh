@@ -21,6 +21,7 @@ LINKS=(
   "alacritty/alacritty.toml:alacritty/alacritty.toml"
   "zsh/spaceship.zsh:spaceship.zsh"
   "xdg/mimeapps.list:mimeapps.list"
+  "openrgb/profiles/default.orp:OpenRGB/profiles/default.orp"
 )
 
 # Special handling for .zshrc (goes to home directory)
