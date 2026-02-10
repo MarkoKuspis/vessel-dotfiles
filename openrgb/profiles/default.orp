@@ -1,4 +1,29 @@
 {
-    "name": "default",
-    "controllers": []
+    "name": "Green Profile",
+    "controllers": [
+        {
+            "name": "Default RGB Device",
+            "type": "Generic RGB",
+            "mode": 0,
+            "speed": 2,
+            "direction": 0,
+            "random": 0,
+            "colors": [
+                [0, 255, 0]
+            ],
+            "zones": [
+                {
+                    "name": "Default Zone",
+                    "type": 0,
+                    "leds_min": 1,
+                    "leds_max": 100,
+                    "leds_count": 1,
+                    "matrix_map": [],
+                    "colors": [
+                        [0, 255, 0]
+                    ]
+                }
+            ]
+        }
+    ]
 }
