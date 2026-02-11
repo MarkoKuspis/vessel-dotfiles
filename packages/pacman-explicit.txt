@@ -156,6 +156,7 @@ nvidia-inst
 nvidia-open
 nvtop
 ocean-sound-theme
+openrgb
 openssh
 os-prober
 oxygen

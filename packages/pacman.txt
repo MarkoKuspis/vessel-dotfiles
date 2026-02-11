@@ -747,6 +747,7 @@ mako
 man-db
 mangohud
 man-pages
+mbedtls
 md4c
 mdadm
 media-player-info
@@ -811,6 +812,7 @@ opencv
 openexr
 openh264
 openjpeg2
+openrgb
 openssh
 openssl
 openvpn
@@ -961,6 +963,8 @@ qhull
 qqc2-breeze-style
 qqc2-desktop-style
 qrencode
+qt5-base
+qt5-translations
 qt6-5compat
 qt6-base
 qt6-declarative
