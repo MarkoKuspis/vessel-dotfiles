@@ -34,3 +34,6 @@ alias grep='grep --color=auto'
 
 # Enable colors
 autoload -U colors && colors
+
+bindkey '^[[1;3C' forward-word   # Alt + Right
+bindkey '^[[1;3D' backward-word  # Alt + Left
