@@ -1,5 +1,6 @@
 1password
 google-chrome
+path-of-building-community-git
 spaceship-prompt
 spotify
 visual-studio-code-bin

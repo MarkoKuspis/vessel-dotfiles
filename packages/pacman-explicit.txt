@@ -162,6 +162,7 @@ os-prober
 oxygen
 oxygen-sounds
 pacman-contrib
+path-of-building-community-git
 pavucontrol
 perl
 pipewire-alsa
@@ -192,6 +193,7 @@ poppler-glib
 powerdevil
 power-profiles-daemon
 print-manager
+proton-vpn-gtk-app
 pv
 python
 python-defusedxml
@@ -244,6 +246,10 @@ welcome
 wev
 wget
 which
+wine
+wine-gecko
+wine-mono
+winetricks
 wireplumber
 wl-clipboard
 wofi
