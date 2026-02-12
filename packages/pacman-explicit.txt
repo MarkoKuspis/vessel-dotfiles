@@ -32,7 +32,6 @@ discover
 dmidecode
 dmraid
 dnsmasq
-dolphin
 dosfstools
 downgrade
 dracut
@@ -61,11 +60,9 @@ file-roller
 firefox
 firewalld
 flatpak-kcm
-foot
 gamemode
 gamescope
 git
-glances
 google-chrome
 grim
 grub
@@ -75,13 +72,11 @@ gst-plugins-bad
 gst-plugins-ugly
 haveged
 hdparm
-htop
 hwdetect
 hwinfo
 hyprland
 hyprpaper
 inetutils
-inxi
 iotop
 iptables-nft
 iwd

@@ -38,7 +38,6 @@ avahi
 ayatana-ido
 b43-fwcutter
 baloo
-baloo-widgets
 base
 base-devel
 bash
@@ -110,7 +109,6 @@ dmidecode
 dmraid
 dnsmasq
 dnssec-anchors
-dolphin
 dosfstools
 double-conversion
 downgrade
@@ -159,7 +157,6 @@ faac
 faad2
 fakeroot
 fastfetch
-fcft
 fd
 ffmpeg
 ffmpegthumbnailer
@@ -177,7 +174,6 @@ flex
 fluidsynth
 fmt
 fontconfig
-foot
 frameworkintegration
 freeglut
 freerdp
@@ -202,7 +198,6 @@ gdk-pixbuf2
 gettext
 giflib
 git
-glances
 glfw
 glib2
 glibc
@@ -265,7 +260,6 @@ hdparm
 hicolor-icon-theme
 hidapi
 highway
-htop
 hunspell
 hwdata
 hwdetect
@@ -289,7 +283,6 @@ imagemagick
 imath
 inetutils
 iniparser
-inxi
 iotop
 iproute2
 iptables-nft
@@ -658,7 +651,6 @@ liburing
 libusb
 libusbmuxd
 libutempter
-libutf8proc
 libuv
 libva
 libva-nvidia-driver
@@ -934,7 +926,6 @@ python
 python-aiohappyeyeballs
 python-aiohttp
 python-aiosignal
-python-annotated-types
 python-attrs
 python-bcc
 python-bcrypt
@@ -972,7 +963,6 @@ python-matplotlib
 python-more-itertools
 python-multidict
 python-numpy
-python-orjson
 python-packaging
 python-pillow
 python-propcache
@@ -983,8 +973,6 @@ python-proton-vpn-local-agent
 python-psutil
 python-pyaml
 python-pycparser
-python-pydantic
-python-pydantic-core
 python-pygdbmi
 python-pynacl
 python-pyopenssl
@@ -997,8 +985,6 @@ python-sentry_sdk
 python-shtab
 python-six
 python-termcolor
-python-typing_extensions
-python-typing-inspection
 python-urllib3
 python-yaml
 python-yarl
