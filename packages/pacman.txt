@@ -56,6 +56,7 @@ bluez-utils
 bolt
 boost-libs
 breeze
+breeze-cursors
 breeze-gtk
 breeze-icons
 breeze-plymouth
@@ -208,6 +209,7 @@ glslang
 glu
 glycin
 gmp
+gnome-keyring
 gnulib-l10n
 gnupg
 gnutls
@@ -354,6 +356,7 @@ kparts
 kpipewire
 kpty
 kquickcharts
+kquickimageeditor
 krb5
 krdp
 krunner
@@ -468,10 +471,12 @@ libadwaita
 libaio
 libappindicator
 libarchive
+libasan
 libass
 libassuan
 libasyncns
 libatasmart
+libatomic
 libavc1394
 libavif
 libavtp
@@ -530,10 +535,13 @@ libffi
 libfontenc
 libfreeaptx
 libfyaml
+libgcc
 libgcrypt
+libgfortran
 libgirepository
 libglvnd
 libgme
+libgomp
 libgpg-error
 libgsf
 libgtop
@@ -559,6 +567,7 @@ libldap
 libliftoff
 liblqr
 liblrdf
+liblsan
 libltc
 libmakepkg-dropins
 libmalcontent
@@ -595,6 +604,7 @@ libnma-gtk4
 libnotify
 libnsl
 libnvme
+libobjc
 libogg
 libopenmpt
 libopenraw
@@ -615,6 +625,7 @@ libqaccessibilityclient-qt6
 libqalculate
 libqmi
 libqrtr-glib
+libquadmath
 libraqm
 libraw1394
 librsvg
@@ -632,6 +643,7 @@ libsoxr
 libsrtp
 libssh
 libssh2
+libstdc++
 libstemmer
 libsysprof-capture
 libtasn1
@@ -643,6 +655,8 @@ libtiff
 libtirpc
 libtommath
 libtool
+libtsan
+libubsan
 libunibreak
 libunistring
 libunwind
@@ -944,6 +958,7 @@ python-dbus-fast
 python-defusedxml
 python-distro
 python-fido2
+python-firewall
 python-fonttools
 python-frozenlist
 python-gnupg
@@ -1080,6 +1095,7 @@ sratom
 srt
 startup-notification
 steam
+steam-devices
 stoken
 stress
 stress-ng
@@ -1215,10 +1231,13 @@ zbar
 zenity
 zeromq
 zimg
+zint
 zix
 zlib
 zlib-ng
 zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
 zstd
 zvbi
 zxing-cpp

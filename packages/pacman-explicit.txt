@@ -267,3 +267,5 @@ xorg-xrandr
 xterm
 yay
 zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
