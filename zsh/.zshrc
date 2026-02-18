@@ -1,3 +1,6 @@
+export COLORTERM=truecolor
+export TERM=${TERM:-xterm-256color}
+
 # Path to spaceship config
 export SPACESHIP_CONFIG="$HOME/.config/spaceship.zsh"
 
@@ -12,6 +15,9 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_REDUCE_BLANKS
 
 # Completion
 autoload -Uz compinit
@@ -37,3 +43,6 @@ autoload -U colors && colors
 
 bindkey '^[[1;3C' forward-word   # Alt + Right
 bindkey '^[[1;3D' backward-word  # Alt + Left
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
