@@ -7,14 +7,14 @@ mkdir -p "$OUTDIR"
 
 # pacman (official + explicit + AUR/foreign)
 if command -v pacman >/dev/null 2>&1; then
-  pacman -Qq | sort > "${OUTDIR}/pacman.txt" || true
+  pacman -Q | sort > "${OUTDIR}/pacman.txt" || true
   pacman -Qqe | sort > "${OUTDIR}/pacman-explicit.txt" || true
   pacman -Qqm | sort > "${OUTDIR}/aur.txt" || true
 fi
 
 # flatpak
 if command -v flatpak >/dev/null 2>&1; then
-  flatpak list --app --columns=application 2>/dev/null | sort > "${OUTDIR}/flatpak.txt" || true
+  flatpak list --app --columns=application,version 2>/dev/null | sort > "${OUTDIR}/flatpak.txt" || true
 fi
 
 # snap
