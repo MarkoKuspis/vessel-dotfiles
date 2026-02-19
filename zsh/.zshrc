@@ -41,8 +41,11 @@ alias grep='grep --color=auto'
 # Enable colors
 autoload -U colors && colors
 
-bindkey '^[[1;3C' forward-word   # Alt + Right
-bindkey '^[[1;3D' backward-word  # Alt + Left
+bindkey '^[[1;3C' end-of-line       # Alt + Right (line end)
+bindkey '^[[1;3D' beginning-of-line # Alt + Left (line start)
+
+bindkey '^[[1;9D' backward-word     # Super + Left (word backward)
+bindkey '^[[1;9C' forward-word      # Super + Right (word forward)
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
