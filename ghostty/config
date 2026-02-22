@@ -12,13 +12,11 @@ adjust-cell-height = 1
 # Window
 window-padding-x = 10
 window-padding-y = 10
-window-decoration = false
+window-decoration = auto
 background-opacity = 0.9
-background-blur-radius = 20
 
 # Cursor
 cursor-style = block
-cursor-style-blink = false
 cursor-color = #c0caf5
 cursor-text = #24283b
 
