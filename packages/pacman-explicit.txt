@@ -32,6 +32,8 @@ discover
 dmidecode
 dmraid
 dnsmasq
+docker
+docker-compose
 dosfstools
 downgrade
 dracut
@@ -155,6 +157,7 @@ ocean-sound-theme
 openrgb
 openssh
 os-prober
+otf-commit-mono-nerd
 oxygen
 oxygen-sounds
 pacman-contrib
@@ -225,7 +228,6 @@ thunar-archive-plugin
 tldr
 ttf-bitstream-vera
 ttf-dejavu
-ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-opensans
 unrar
