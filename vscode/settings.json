@@ -1,0 +1,12 @@
+{
+    "projectManager.git.baseFolders": [
+        "./"
+    ],
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "JetBrainsMono Nerd Font, monospace",
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "git.confirmSync": false,
+    "files.autoSave": "afterDelay",
+    "explorer.confirmDelete": false
+}

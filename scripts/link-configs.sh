@@ -20,6 +20,8 @@ LINKS=(
   "ghostty/config:ghostty/config"
   "zsh/spaceship.zsh:spaceship.zsh"
   "xdg/mimeapps.list:mimeapps.list"
+
+  "vscode/settings.json:Code/User/settings.json"
 )
 
 # Special handling for .zshrc (goes to home directory)
@@ -82,6 +84,7 @@ echo "Linking dotfiles (Option A: file-level, idempotent)…"
 # Ensure these are REAL dirs (kills your old folder symlinks)
 ensure_real_dir "$CONFIG/hypr"
 ensure_real_dir "$CONFIG/waybar"
+ensure_real_dir "$CONFIG/Code/User"
 
 for pair in "${LINKS[@]}"; do
   IFS=":" read -r src dst <<<"$pair"
