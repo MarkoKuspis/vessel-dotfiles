@@ -18,11 +18,9 @@ LINKS=(
 
   "mako/config:mako/config"
   "foot/foot.ini:foot/foot.ini"
-  "alacritty/alacritty.toml:alacritty/alacritty.toml"
+  "ghostty/config:ghostty/config"
   "zsh/spaceship.zsh:spaceship.zsh"
   "xdg/mimeapps.list:mimeapps.list"
-
-  "openrgb/profiles/static_bronze.orp:OpenRGB/static_bronze.orp"
 )
 
 # Special handling for .zshrc (goes to home directory)
