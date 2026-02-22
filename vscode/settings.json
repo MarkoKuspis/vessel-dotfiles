@@ -1,12 +1,58 @@
 {
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "editor.rulers": [
+        120
+    ],
+    "editor.fontFamily": "JetBrainsMono Nerd Font, monospace",
+    "editor.fontSize": 14,
+    "editor.scrollBeyondLastLine": false,
+    "editor.inlineSuggest.enabled": true,
+    "files.autoSave": "afterDelay",
+    "files.trimTrailingWhitespace": true,
     "projectManager.git.baseFolders": [
         "./"
     ],
-    "github.copilot.nextEditSuggestions.enabled": true,
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "JetBrainsMono Nerd Font, monospace",
-    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "vscode-pets.petSize": "medium",
+    "explorer.fileNesting.enabled": true,
+    "eslint.codeActionsOnSave.rules": null,
+    "eslint.workingDirectories": [
+      {
+        "mode": "auto"
+      }
+    ],
+    "redhat.telemetry.enabled": false,
     "git.confirmSync": false,
-    "files.autoSave": "afterDelay",
-    "explorer.confirmDelete": false
+    "workbench.iconTheme": "vscode-icons",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.editor.enablePreview": false,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.editor.empty.hint": "hidden",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[dockercompose]": {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2,
+      "editor.autoIndent": "advanced",
+      "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+      "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "terminal.external.osxExec": "Ghostty.app",
+    "languageServerHerb.linter.enabled": true,
+    "languageServerHerb.formatter.enabled": true,
+    "terminal.integrated.fontSize": 14,
+    "debug.console.fontSize": 14,
+    "chat.viewSessions.orientation": "stacked",
+    "rubyLsp.enabledFeatures": {
+      "codeLens": false
+    }
 }
