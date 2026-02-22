@@ -1,4 +1,5 @@
 1password
+asdf-vm
 google-chrome
 path-of-building-community-git
 spaceship-prompt

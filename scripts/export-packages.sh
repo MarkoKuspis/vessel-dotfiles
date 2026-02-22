@@ -27,11 +27,6 @@ if command -v pip3 >/dev/null 2>&1; then
   pip3 freeze 2>/dev/null | sort > "${OUTDIR}/pip.txt" || true
 fi
 
-# npm (node)
-if command -v npm >/dev/null 2>&1; then
-  npm -g ls --depth=0 --parseable 2>/dev/null | sed '1d' | xargs -r -n1 basename 2>/dev/null | sort > "${OUTDIR}/npm.txt" || true
-fi
-
 # cargo (rust)
 if command -v cargo >/dev/null 2>&1; then
   cargo install --list 2>/dev/null | awk '/^([^ ]+).*v[0-9]/ {print $1}' | sed 's/:$//' | sort > "${OUTDIR}/cargo.txt" || true

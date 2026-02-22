@@ -11,7 +11,6 @@ AUR_FILE="${PKGDIR}/aur.txt"
 FLATPAK_FILE="${PKGDIR}/flatpak.txt"
 SNAP_FILE="${PKGDIR}/snap.txt"
 PIP_FILE="${PKGDIR}/pip.txt"
-NPM_FILE="${PKGDIR}/npm.txt"
 CARGO_FILE="${PKGDIR}/cargo.txt"
 NIX_FILE="${PKGDIR}/nix.txt"
 BREW_FILE="${PKGDIR}/brew.txt"
@@ -93,17 +92,6 @@ if [[ -f "$PIP_FILE" && -s "$PIP_FILE" ]]; then
     echo "== Done with pip packages =="
   else
     echo "NOTE: pip3 list present but pip3 not installed; skipping."
-  fi
-fi
-
-# npm
-if [[ -f "$NPM_FILE" && -s "$NPM_FILE" ]]; then
-  if command -v npm >/dev/null 2>&1; then
-    echo "== Installing npm global packages from: $NPM_FILE =="
-    xargs -a "$NPM_FILE" -r npm install -g || true
-    echo "== Done with npm packages =="
-  else
-    echo "NOTE: npm list present but npm not installed; skipping."
   fi
 fi
 

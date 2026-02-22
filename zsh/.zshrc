@@ -19,6 +19,8 @@ setopt INC_APPEND_HISTORY
 setopt EXTENDED_HISTORY
 setopt HIST_REDUCE_BLANKS
 
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
 # Completion
 autoload -Uz compinit
 compinit

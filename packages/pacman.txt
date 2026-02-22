@@ -24,6 +24,7 @@ appstream-qt 1.1.2-1
 aquamarine 0.10.0-2
 archlinux-appstream-data 20260107-1
 archlinux-keyring 20260206-1
+asdf-vm 0.18.0-1
 aspell 0.60.8.2-1
 atkmm 2.28.4-1
 at-spi2-core 2.58.3-1
@@ -157,6 +158,7 @@ faac 1.31.1-1
 faad2 2.11.2-1
 fakeroot 1.37.2-1
 fastfetch 2.59.0-1
+fcft 3.3.3-1
 fd 10.3.0-2
 ffmpeg 2:8.0.1-7
 ffmpegthumbnailer 2.3.0-1
@@ -572,6 +574,7 @@ liblqr 0.4.3-1
 liblrdf 0.6.1-5
 liblsan 15.2.1+r604+g0b99615a8aef-1
 libltc 1.3.2-2
+libluv 1.51.0-1
 libmakepkg-dropins 20-1
 libmalcontent 0.13.1-1
 libmanette 0.2.13-1
@@ -668,6 +671,7 @@ liburing 2.14-1
 libusb 1.0.29-1
 libusbmuxd 2.1.1-2
 libutempter 1.2.3-1
+libutf8proc 2.11.3-1
 libuv 1.52.0-1
 libva 2.22.0-1
 libva-nvidia-driver 0.0.15-1
@@ -676,6 +680,7 @@ libverto 0.3.2-5
 libvorbis 1.3.7-4
 libvpl 2.16.0-2
 libvpx 1.15.2-2
+libvterm 0.3.3-2
 libwacom 2.18.0-2
 libwbclient 2:4.23.5-1
 libwebp 1.6.0-2
@@ -749,6 +754,7 @@ l-smash 2.14.5-4
 lsof 4.99.5-2
 lsscsi 0.32-2
 lua51 5.1.5-13
+lua51-lpeg 1.1.0-4
 lua51-luautf8 0.2.0-1
 lua 5.4.8-2
 luajit 2.1.1767980792+707c12b-2
@@ -782,6 +788,7 @@ modemmanager-qt 6.23.0-1
 mpdecimal 4.0.1-1
 mpfr 4.2.2-1
 mpg123 1.33.4-1
+msgpack-c 6.1.0-2
 mtdev 1.1.7-1
 mtools 1:4.0.49-1
 muparser 2.3.5-2
@@ -1128,6 +1135,13 @@ tinysparql 3.10.1-2
 tldr 3.4.4-1
 tomlplusplus 3.4.0-1
 tpm2-tss 4.1.3-1
+tree-sitter 0.25.10-3
+tree-sitter-c 0.24.1-1
+tree-sitter-lua 0.4.0-1
+tree-sitter-markdown 0.5.1-1
+tree-sitter-query 0.7.0-1
+tree-sitter-vim 0.7.0-1
+tree-sitter-vimdoc 4.0.0-1
 tslib 1.24-1
 ttf-bitstream-vera 1.10-16
 ttf-dejavu 2.37+18+g9b5d1b2f-7
@@ -1137,6 +1151,7 @@ ttf-liberation 2.1.5-2
 ttf-opensans 3.003-1
 tzdata 2025c-1
 udisks2 2.11.0-1
+unibilium 2.1.2-1
 unrar 1:7.2.4-1
 unzip 6.0-23
 upower 1.91.1-1
