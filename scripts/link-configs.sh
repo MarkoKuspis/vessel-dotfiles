@@ -17,7 +17,6 @@ LINKS=(
   "wofi/config:wofi/config"
 
   "mako/config:mako/config"
-  "foot/foot.ini:foot/foot.ini"
   "ghostty/config:ghostty/config"
   "zsh/spaceship.zsh:spaceship.zsh"
   "xdg/mimeapps.list:mimeapps.list"
