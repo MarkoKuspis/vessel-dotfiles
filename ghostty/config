@@ -17,9 +17,6 @@ background-opacity = 0.9
 
 # Cursor
 cursor-style = block
-adjust-cursor-thickness = 4
-cursor-color = #c0caf5
-cursor-text = #24283b
 
 # Scrollback
 scrollback-limit = 10000
