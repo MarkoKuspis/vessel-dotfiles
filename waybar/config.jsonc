@@ -28,8 +28,8 @@
     "tray"
   ],
   "clock": {
-    "format": "  {:%H:%M}",
-    "format-alt": "  {:%A, %B %d, %Y}",
+    "format": " {:%H:%M}",
+    "format-alt": " {:%A, %B %d, %Y}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "cpu": {
@@ -106,10 +106,10 @@
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
   "pulseaudio": {
-    "format": "{volume}% {icon}  |  {format_source}",
-    "format-bluetooth": "{volume}% {icon}  |  {format_source}",
-    "format-bluetooth-muted": "  {icon}  |  {format_source}",
-    "format-muted": "   |  {format_source}",
+    "format": "{volume}% {icon} | {format_source}",
+    "format-bluetooth": "{volume}% {icon} | {format_source}",
+    "format-bluetooth-muted": " {icon} | {format_source}",
+    "format-muted": " | {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": " ",
     "format-icons": {
