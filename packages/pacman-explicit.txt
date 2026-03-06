@@ -127,11 +127,13 @@ man-db
 mangohud
 man-pages
 mdadm
+mediainfo
 meld
 mesa-utils
 milou
 mkinitcpio
 modemmanager
+mpv
 mtools
 nano
 nano-syntax-highlighting
@@ -199,6 +201,7 @@ python-defusedxml
 python-jinja
 python-packaging
 python-pyqt6
+qbittorrent
 qqc2-breeze-style
 rebuild-detector
 reflector
