@@ -81,7 +81,7 @@ hyprland
 hyprpaper
 inetutils
 iotop
-iptables-nft
+iptables
 iwd
 jfsutils
 kactivitymanagerd
@@ -137,6 +137,7 @@ mpv
 mtools
 nano
 nano-syntax-highlighting
+ncdu
 netctl
 networkmanager
 network-manager-applet
@@ -155,6 +156,8 @@ nvidia-hook
 nvidia-inst
 nvidia-open
 nvtop
+obsidian
+obs-studio
 ocean-sound-theme
 openrgb
 openssh

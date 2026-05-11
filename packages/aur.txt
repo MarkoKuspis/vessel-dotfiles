@@ -1,4 +1,5 @@
 1password
+accounts-qml-module
 asdf-vm
 google-chrome
 path-of-building-community-git

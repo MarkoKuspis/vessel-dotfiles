@@ -54,5 +54,6 @@
     "chat.viewSessions.orientation": "stacked",
     "rubyLsp.enabledFeatures": {
       "codeLens": false
-    }
+    },
+    "terminal.integrated.initialHint": false
 }
